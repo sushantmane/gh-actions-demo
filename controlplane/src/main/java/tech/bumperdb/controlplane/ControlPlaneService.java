@@ -10,7 +10,7 @@ public class ControlPlaneService {
     public static void main(String[] args) throws InterruptedException {
         long currentTimeMillis = System.currentTimeMillis();
         while (currentTimeMillis < Long.MAX_VALUE) {
-            logger.info("Current time:{}", currentTimeMillis);
+            logger.info("CPS - Current time:{}", currentTimeMillis);
             Thread.sleep(5000);
             currentTimeMillis = System.currentTimeMillis();
         }
