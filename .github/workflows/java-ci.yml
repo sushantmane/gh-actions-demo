@@ -16,7 +16,7 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
       - name: package artifacts
-        run: mkdir staging && cp target/*.jar staging
+        run:  mkdir staging && find */target/* -name "*.jar" -exec cp "{}" staging \;
       - uses: actions/upload-artifact@v3
         with:
           name: Package
